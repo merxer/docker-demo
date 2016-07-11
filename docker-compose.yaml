@@ -1,6 +1,15 @@
 version: '2'
 services:
+    lb:
+        image: dockercloud/haproxy
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+        ports:
+            - 80:80
+        links:
+            - api
+            - api2
     api:
         image: merxer/docker-demo:0.0.1
-        ports:
-        - 80:8888
+    api2:
+        image: merxer/docker-demo:0.0.1
