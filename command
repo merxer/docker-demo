@@ -1,8 +1,7 @@
-vi Dockerfile
-#---- inside Dockerfile ---#
-FROM ubuntu:14.04
-#----- end Dockerfile ---#
-docker build -t  merxer/docker-demo:base .
-docker images
 docker login hub.docker.com
-docker push  merxer/docker-demo
+git clone http://github.com/merxer/docker-demo.git
+docker build -t merxer/docker-demo:0.0.1 .
+docker images
+docker run -d -p 80:8080 merxer/docker-demo:0.0.1
+
+curl http://127.0.0.1
