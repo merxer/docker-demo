@@ -1,4 +1,4 @@
-docker login hub.docker.com
+docker login
 git clone http://github.com/merxer/docker-demo.git
 docker build -t merxer/docker-demo:0.0.1 .
 docker images
