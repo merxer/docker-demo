@@ -42,7 +42,7 @@ func main() {
 
   info := Info{
     Hostname: GetHostname(),
-    Version: "0.0.1",
+    Version: "0.0.2",
   }
 
   t := &Template{
